@@ -26,4 +26,4 @@ fi
 #chown me: /var/run/docker.sock
 
 # TODO open nv on startup
-exec /sbin/su-exec me zsh
+exec /sbin/su-exec me nvim
