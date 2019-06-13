@@ -7,7 +7,7 @@ Plug 'mhinz/vim-startify'
 " Code completion
 Plug 'jiangmiao/auto-pairs'
 Plug 'carlitux/deoplete-ternjs'
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Editing
@@ -105,6 +105,7 @@ set laststatus=2
 set ttimeoutlen=50
 set noshowmode
 let g:airline_theme='badwolf'
+let g:airline_powerline_fonts=1
 
 " Make NERDTree show hidden files
 let NERDTreeShowHidden=1
