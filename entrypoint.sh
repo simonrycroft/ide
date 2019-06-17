@@ -25,5 +25,6 @@ fi
 # Setting permissions on docker.sock
 #chown me: /var/run/docker.sock
 
+
 # TODO open nv on startup
 exec /sbin/su-exec me nvim

@@ -15,13 +15,17 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'Yggdroot/indentLine'
 
 " File Navigation
-Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " File Search
 Plug 'ctrlpvim/ctrlp.vim'
+
+" Tag management
+Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-shell'
 
 " Formatting
 Plug 'stephpy/vim-yaml'

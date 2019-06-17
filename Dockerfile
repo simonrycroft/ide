@@ -6,7 +6,8 @@ RUN apk add -U --no-cache \
     curl less man \
     docker su-exec \
     musl-dev linux-headers \
-    neovim npm nodejs
+    neovim npm nodejs \
+    ctags
 
 RUN apk add --no-cache python3 && \
     python3 -m ensurepip && \
@@ -19,6 +20,7 @@ RUN apk add --no-cache python3 && \
 RUN pip3 install pynvim
 
 RUN npm install -g tern
+RUN npm install -g git+https://github.com/ramitos/jsctags.git
 
 RUN curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | zsh || true
 
