@@ -110,6 +110,13 @@ let g:airline_powerline_fonts=1
 " Make NERDTree show hidden files
 let NERDTreeShowHidden=1
 
+let g:startify_lists = [
+      \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+      \ { 'type': 'sessions',  'header': ['   Sessions']       },
+      \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+      \ { 'type': 'commands',  'header': ['   Commands']       },
+      \ ]
+
 " Open NERDTree and Startify on start up
 autocmd VimEnter *
             \   if !argc()

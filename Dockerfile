@@ -37,7 +37,7 @@ ENV HOME /home/me
 COPY entrypoint.sh /bin/entrypoint.sh
 
 # Set working directory to /workspace
-WORKDIR /workspace
+#WORKDIR /workspace
 
 RUN chown -R me:me /home/me
 
@@ -64,4 +64,5 @@ CMD ["/bin/entrypoint.sh"]
 # Linting not working
 # Auto prettifying not working
 # Deoplete not working
-# Persist startify data
+# Persist startify data on host machine
+# Dynamic workspace name so startify worksk
