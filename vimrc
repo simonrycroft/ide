@@ -117,6 +117,16 @@ let g:startify_lists = [
       \ { 'type': 'commands',  'header': ['   Commands']       },
       \ ]
 
+let g:startify_custom_header = [
+      \ '        _   __                _              ________  ______',
+      \ '       / | / /__  ____ _   __(_)___ ___     /  _/ __ \/ ____/',
+      \ '      /  |/ / _ \/ __ \ | / / / __ `__ \    / // / / / __/',
+      \ '     / /|  /  __/ /_/ / |/ / / / / / / /  _/ // /_/ / /___',
+      \ '    /_/ |_/\___/\____/|___/_/_/ /_/ /_/  /___/_____/_____/',
+      \ '',
+      \ '',
+      \ ]
+
 " Open NERDTree and Startify on start up
 autocmd VimEnter *
             \   if !argc()
