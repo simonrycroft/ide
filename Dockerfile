@@ -54,15 +54,4 @@ RUN nvim +'UpdateRemotePlugins' +qa
 
 USER root
 
-# Default entrypoint, can be overridden CMD ["/bin/entrypoint.sh"]
 CMD ["/bin/entrypoint.sh"]
-
-
-# TODO
-# CTRL+P being weird
-# Linter can't send data to closed streamuser - error goes away after manually running :UpdateRemotePlugins
-# Linting not working
-# Auto prettifying not working
-# Deoplete not working
-# Persist startify data on host machine
-# Dynamic workspace name so startify worksk
