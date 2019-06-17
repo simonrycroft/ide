@@ -36,9 +36,6 @@ ENV HOME /home/me
 # Entrypoint script does switches u/g ID's and `chown`s everything
 COPY entrypoint.sh /bin/entrypoint.sh
 
-# Set working directory to /workspace
-#WORKDIR /workspace
-
 RUN chown -R me:me /home/me
 
 USER me
