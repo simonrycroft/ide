@@ -22,8 +22,6 @@ RUN pip3 install pynvim
 RUN npm install -g tern
 RUN npm install -g git+https://github.com/ramitos/jsctags.git
 
-RUN curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | zsh || true
-
 COPY ./zshrc /home/me/.zshrc
 COPY ./vimrc /home/me/.config/nvim/init.vim
 COPY ./nvim /home/me/nvim

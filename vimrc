@@ -13,6 +13,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Editing
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Yggdroot/indentLine'
+Plug 'terryma/vim-expand-region'
 
 " File Navigation
 Plug 'scrooloose/nerdtree'
@@ -27,9 +28,13 @@ Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-shell'
 
-" Formatting
+" Commenting
+Plug 'scrooloose/nerdcommenter'
+
+" Syntax, highlighting, formatting
 Plug 'stephpy/vim-yaml'
 Plug 'godlygeek/tabular'
+Plug 'leafgarland/typescript-vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -108,7 +113,8 @@ au FileType javascript set tabstop=4
 set laststatus=2
 set ttimeoutlen=50
 set noshowmode
-let g:airline_theme='badwolf'
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 let g:airline_powerline_fonts=1
 
 " Make NERDTree show hidden files
@@ -199,7 +205,7 @@ set history=100
 " Make sure this is loaded last
 
 set nocompatible              " be iMproved, required
-filetype on                  " required
+filetype plugin on                  " required
 let mapleader = ","
 
 " Generates Ale documentation tags
