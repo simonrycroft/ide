@@ -61,6 +61,9 @@ Plug 'heavenshell/vim-jsdoc'
 " Code coverage
 Plug 'retorillo/istanbul.vim'
 
+" UNIX commands
+Plug 'tpope/vim-eunuch'
+
 " Initialize plugin system
 call plug#end()
 

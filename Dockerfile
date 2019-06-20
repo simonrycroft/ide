@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.10
 
 RUN apk add -U --no-cache \
     git gcc python python3-dev \
@@ -6,8 +6,8 @@ RUN apk add -U --no-cache \
     curl less man \
     docker su-exec \
     musl-dev linux-headers \
-    neovim npm nodejs \
-    ctags
+    neovim neovim-doc \
+    npm nodejs ctags
 
 RUN apk add --no-cache python3 && \
     python3 -m ensurepip && \
