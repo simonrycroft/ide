@@ -7,7 +7,8 @@ RUN apk add -U --no-cache \
     docker su-exec \
     musl-dev linux-headers \
     neovim neovim-doc \
-    npm nodejs ctags
+    npm nodejs ctags \
+    tmux openssh-client bash ncurses
 
 RUN apk add --no-cache python3 && \
     python3 -m ensurepip && \
@@ -21,13 +22,14 @@ RUN pip3 install pynvim
 
 RUN npm install -g tern
 RUN npm install -g git+https://github.com/ramitos/jsctags.git
-
-COPY ./zshrc /home/me/.zshrc
-COPY ./vimrc /home/me/.config/nvim/init.vim
-COPY ./nvim /home/me/nvim
+RUN npm install -g livedown
 
 # Create a user called 'me'
 RUN adduser -D -s /bin/zsh -h /home/me me
+
+COPY ./zshrc /home/me/.zshrc
+COPY ./vimrc /home/me/.config/nvim/init.vim
+#COPY ./tmux.conf /home/me/.tmux.conf
 
 # Do everything from now in that users home directory
 WORKDIR /home/me
@@ -48,6 +50,12 @@ RUN curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubu
 # Install plugins
 RUN nvim +'PlugInstall --sync' +qa
 RUN nvim +'UpdateRemotePlugins' +qa
+
+# Install Tmux Plugin Manager
+#ENV TMUX_PLUGIN_MANAGER_PATH = /home/me/.tmux/plugins
+#RUN git clone https://github.com/tmux-plugins/tpm /home/me/.tmux/plugins/tpm
+# Install plugins
+#RUN /home/me/.tmux/plugins/tpm/bin/install_plugins
 
 USER root
 

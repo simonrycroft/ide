@@ -28,3 +28,4 @@ fi
 
 # TODO open nv on startup
 exec /sbin/su-exec me nvim
+#exec /sbin/su-exec me tmux -u -2 "$@"

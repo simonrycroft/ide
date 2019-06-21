@@ -64,6 +64,12 @@ Plug 'retorillo/istanbul.vim'
 " UNIX commands
 Plug 'tpope/vim-eunuch'
 
+" Use zsh for all terminal windows
+set shell=zsh\ -i
+
+" Markdown Preview
+Plug 'shime/vim-livedown'
+
 " Initialize plugin system
 call plug#end()
 
@@ -171,6 +177,9 @@ if executable('ag')
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+" Start livedown on opening a *.md file
+let g:livedown_autorun = 1
 
 " Auto linting
 let g:ale_lint_on_save = 1
